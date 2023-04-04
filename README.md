@@ -77,7 +77,8 @@ THEN I should have proper build scripts for a webpack application
 
 ## Preview
 
-<img src= "assets/images/title.jpg"/>
+<img src= "assets/images/C19 Screenshot 1.png"/>
+<img src= "assets/images/C19 Screenshot 2.png"/>
 
 #
 
