@@ -7,31 +7,53 @@ const initdb = async () =>
         console.log('jate database already exists');
         return;
       }
-      db.createObjectStore('jate', { keyPath: 'id'});
+      db.createObjectStore('jate', { keyPath: 'id', autoIncrement: true });
       console.log('jate database created');
     },
   });
 
 // TODO: Add logic to a method that accepts some content and adds it to the database
 export const putDb = async (content) => {
+  console.log('PUT to the database');
+
+  //create a connection to the database and version. 
   const jateDb = await openDB('jate', 1);
+
+  //Create a transaction on the contact database with readwrite access.
   const tx = jateDb.transaction('jate', 'readwrite');
+
+  //Access the object store.
   const store = tx.objectStore('jate');
+
+  //Add the content to the object store.
   const request = store.put({ id: 1, value: content });
+
+  //Get the confirmation of the request.
   const result = await request;
-  console.log('🚀 - data saved to the database', result);
+  console.log('🚀 - data saved to the database', result.value);
 };
+
 
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
+  console.log('GET all from the database');
+
+  // Create a connection to the database database and version we want to use.
   const jateDb = await openDB('jate', 1);
+
+  // Create a new transaction and specify the database and data privileges.
   const tx = jateDb.transaction('jate', 'readonly');
+
+  // Open up the desired object store.
   const store = tx.objectStore('jate');
-  const request = store.getAll();
+
+  // Use the .getAll() method to get all data in the database.
+  const request = store.get(1);
+
+   // Get confirmation of the request.
   const result = await request;
   console.log('result.value', result);
-  const data = result[0].value;
-  return data;
+  return result?.value;
 };
 
 initdb();
