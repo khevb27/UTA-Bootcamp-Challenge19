@@ -7,7 +7,7 @@
     "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\" ",
     "start": "npm run build && cd server && node server.js",
     "server": "cd server node server.js --ignore client",
-    "build": "cd client && npm run build",
+    "build": "webpack --mode production",
     "install": "cd server && npm i && cd ../client && npm i",
     "client": "cd client && npm start"
   },
@@ -20,7 +20,8 @@
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "webpack": "^5.77.0"
   },
   "repository": {
     "type": "git",
