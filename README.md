@@ -84,7 +84,7 @@ THEN I should have proper build scripts for a webpack application
 
 ## Links
 
-- Heroku Deployment Link:
+- Heroku Deployment Link: https://uta-texteditor-app.herokuapp.com/ 
 - GitHub Repository Link: https://github.com/khevb27/UTA-Bootcamp-Challenge19 
 
 ----------------------------------------------------------------------
