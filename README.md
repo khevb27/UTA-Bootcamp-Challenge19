@@ -52,6 +52,7 @@ THEN I should have proper build scripts for a webpack application
 - [Installation](#installation)
 - [Built Using](#built-using)
 - [Preview](#preview)
+- [Credits](#credits)
 - [Links](#links)
 - [License](#license)
 
@@ -80,7 +81,11 @@ THEN I should have proper build scripts for a webpack application
 <img src= "assets/images/C19 Screenshot 1.png"/>
 <img src= "assets/images/C19 Screenshot 2.png"/>
 
-#
+## Credits
+
+This project was worked on in collaboration with:
+- Erin Peifer: https://github.com/Airen22
+- Code template credits: UTA Coding Bootcamp Repo
 
 ## Links
 
